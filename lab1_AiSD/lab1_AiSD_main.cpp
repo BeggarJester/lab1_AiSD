@@ -54,10 +54,10 @@ int main()
 	cout << '\n';
 	cout << '\n';
 	cout << "Get the list of Map values:\n\n";
-	Linked_list<int> bye = MyCustomMap.get_values();
-	while (bye.head != NULL) {
-		cout << bye.get_head() << " ";
-		bye.set_next();
+	Linked_list<int> map_values = MyCustomMap.get_values();
+	while (map_values.head != NULL) {
+		cout << map_values.get_head() << " ";
+		map_values.set_next();
 	}
 	return 0;
 }
