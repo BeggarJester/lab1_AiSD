@@ -304,20 +304,20 @@ private:
 				}
 
 				if (brother->left->color == 0 && brother->right->color == 0) {
-					// if x's brother color is red, and both of x’s brother's children are black
+					// if x's brother color is red, and both of xâ€™s brother's children are black
 					brother->color = 1;
 					x = x->parent;
 				}
 				else {
 					if (brother->right->color == 0) {
-						// if x's brother color is red, x’s brother's right child is black, x’s brother's left child is red
+						// if x's brother color is red, xâ€™s brother's right child is black, xâ€™s brother's left child is red
 						brother->left->color = 0;
 						brother->color = 1;
 						right_rotate(brother);
 						brother = x->parent->right;
 					}
 
-					// if x's brother color is black, x’s brother's right child is red
+					// if x's brother color is black, xâ€™s brother's right child is red
 					brother->color = x->parent->color;
 					x->parent->color = 0;
 					brother->right->color = 0;
@@ -337,20 +337,20 @@ private:
 				}
 
 				if (brother->right->color == 0 && brother->left->color == 0) {
-					// if x's brother color is red, and both of x’s brother's children are black
+					// if x's brother color is red, and both of xâ€™s brother's children are black
 					brother->color = 1;
 					x = x->parent;
 				}
 				else {
 					if (brother->left->color == 0) {
-						// if x's brother color is red, x’s brother's right child is red, x’s brother's left child is black
+						// if x's brother color is red, xâ€™s brother's right child is red, xâ€™s brother's left child is black
 						brother->right->color = 0;
 						brother->color = 1;
 						left_rotate(brother);
 						brother = x->parent->left;
 					}
 
-					// if x's brother color is black, x’s brother's left child is red
+					// if x's brother color is black, xâ€™s brother's left child is red
 					brother->color = x->parent->color;
 					x->parent->color = 0;
 					brother->left->color = 0;
@@ -398,7 +398,7 @@ private:
 	}
 
 	//algorithm part of get values operation
-	void get_values_algorithm(Node* node, Linked_list<first_typename>& MyLinked_list) {
+	void get_values_algorithm(Node* node, Linked_list<second_typename>& MyLinked_list) {
 		if (node != Nil) {
 			MyLinked_list.insert_node(node->value);
 			get_values_algorithm(node->left, MyLinked_list);
